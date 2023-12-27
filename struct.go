@@ -7,6 +7,13 @@ type Customer struct {
 	Age int
 }
 
+// struct can be used as a parameter of a function
+// function inside of a struct called a method
+
+func (customer Customer) sayHello() {
+	log.Println("Hello, My name is", customer.Name)
+}
+
 func main() {
 	var nael Customer
 	nael.Name = "Nata Nael"
@@ -27,4 +34,7 @@ func main() {
 	evelyn := Customer{"Evelyn Viriya", "Kalideres", 22}
 
 	log.Println(evelyn)
+
+	alin := Customer{Name: "Alin"}
+	alin.sayHello()
 }
