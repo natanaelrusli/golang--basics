@@ -26,10 +26,19 @@ func (animal Animal) GetName() string {
 	return animal.Name
 }
 
+func Ups() interface{} {
+	// return 1
+	// return true
+	return "Ups"
+}
+
 func main() {
 	person := Person{Name: "Nael"}
 	animal := Animal{Name: "Hoshi"}
 	
 	SayHello(person)
 	SayHello(animal)
+
+	var kosong any = Ups()
+	log.Println(kosong)
 }
